@@ -11,4 +11,4 @@ var FoodFight = (function(enemy) {
 
 })(FoodFight ||{})
 
-console.log(FoodFight.player2);
+// console.log(FoodFight.player2);
