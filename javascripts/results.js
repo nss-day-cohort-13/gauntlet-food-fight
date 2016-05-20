@@ -4,12 +4,12 @@ var FoodFight = (function (results) {
 	var modal = $(".modalDiv");
 
 	function playAgain () {
-		modal.hide();
+		window.location.reload();
 	}
 
 	results.checkForDeath = function(hero, enemy) {
 		if (hero <= 0 || enemy <= 0) {
-			modal.show();
+			modal.show("slow");
 			if(hero <= 0 && enemy <= 0) {
 				resultsDiv.append(`<p class="resultP">You have both been defeated. Would you like to play again?`);
 			}
