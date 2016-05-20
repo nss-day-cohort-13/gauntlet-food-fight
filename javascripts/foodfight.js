@@ -4,14 +4,12 @@ var FoodFight = (function(fight) {
   //get player 2 (functionality to allow for different options later)
   var enemy = FoodFight.player2;
 
-  //TODO:output player 1 info to dom info div. 
-  $("#heroInfo").text(`${hero.name}`);
-  
-  //TODO: output player 2 info to dom info div. 
+  //output player info to dom info div. 
+  $("#heroInfo").text(`${hero.name}`);  
   $("#enemyInfo").text(`${enemy.name}`);
 
-  var currentHeroHealth = hero.health;
 
+  var currentHeroHealth = hero.health;
   var currentEnemyHealth = enemy.health;
 
   //initial output to dom of current health. We also use this function as part of the attack button. 
@@ -39,9 +37,9 @@ var FoodFight = (function(fight) {
     fight.outputCurrentHealths();
     fight.logAttacks(heroAttack, enemyAttack);
 
-    //check if any healths are zero. Hannah is writing this in a separate IIFE and will activate when ready.
-    //Foodfight.checkForDeath();
-  })
+    //check if any healths are zero.
+    Foodfight.checkForDeath(currentHeroHealth, currentEnemyHealth);
+  });
 
 
 
@@ -49,14 +47,13 @@ var FoodFight = (function(fight) {
     currentHeroHealth -= enemyAttack;
     return currentHeroHealth;
 
-  }
+  };
 
   fight.updateEnemyHealth = function(heroAttack) {
     currentEnemyHealth -= heroAttack;
     return currentEnemyHealth;
-  }
+  };
 
-  //TODO: change 'append' to 'text' later once we feel comfortable with the math. 
   fight.logAttacks = function(heroAttack, enemyAttack) {
     $("#battleLog").text(`${enemy.name} attacked ${hero.name} and caused ${enemyAttack} damage. ${hero.name} attacked ${enemy.name} and caused ${heroAttack} damage.`)
   }
