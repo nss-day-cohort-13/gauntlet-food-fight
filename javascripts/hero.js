@@ -9,6 +9,6 @@ var FoodFight = (function(hero){
 
 	hero.player1 = new hero.Player1("Larry");
 
-	return hero
+	return hero;
 
 })(FoodFight || {})
