@@ -11,13 +11,13 @@ var FoodFight = (function (results) {
 		if (hero <= 0 || enemy <= 0) {
 			modal.show("slow");
 			if(hero <= 0 && enemy <= 0) {
-				resultsDiv.append(`<p class="resultP">You have both been defeated. Would you like to play again?`);
+				resultsDiv.text(`You have both been defeated. Would you like to play again?`);
 			}
 			else if (hero <= 0) {
-				resultsDiv.append(`<p class="resultP">Sorry you've been defeated. Would you like to play again?</p>`);
+				resultsDiv.text(`Sorry you've been defeated. Would you like to play again?`);
 			}
 			else if(enemy <= 0) {
-				resultsDiv.append(`<p class="resultP">You are the victor! Would you like to play again?</p>`);
+				resultsDiv.text(`You are the victor! Would you like to play again?`);
 			}
 		}
 		resetBtn.click(playAgain);
