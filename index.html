@@ -8,22 +8,6 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-=======
-<!-- this whole div will be hidden at start of game. -->
-<!-- button here till function is worked out to show results -->
-  <div class="modalDiv" hidden>
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <!-- results/end of game announcement goes here. -->
-        <div id="results">
-        </div>
-        <button type="reset" id="resetButton" class= "btn btn-lg btn-warning">Play Again</button>
-      </div>
-    </div>
-  </div>
->>>>>>> master
-
   <section id="choosey" class= "container-fluid">
     <div class="row">
 <!-- options for character will go here -->
@@ -32,15 +16,23 @@
   </section>
 
 
-  <!-- BATTLE ARENA -->
+
+
+
+  <!-- BATTLE ARENA- hidden until after choosey. -->
   <section id="fight" hidden>
 
-  <!-- this result div will be hidden until someone dies. . -->
-    <div id="resultDiv" hidden>
-      <!-- results/end of game announcement goes here. -->
-      <div id="results">
+    <!-- this result div will be hidden until someone dies. . -->
+    <!-- button here till function is worked out to show results -->
+    <div class="modalDiv" hidden>
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <!-- results/end of game announcement goes here. -->
+          <div id="results">
+          </div>
+          <button id="resetButton" class= "btn btn-lg btn-warning">Play Again</button>
+        </div>
       </div>
-      <button id="resetButton" class= "btn btn-lg btn-warning">Play Again</button>
     </div>
 
     <div class=container-fluid>
