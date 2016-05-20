@@ -2,7 +2,7 @@
 var FoodFight = (function(hero){
 
 	hero.Player1 = function (name) {
-		this.health = 50;
+		this.health = 0;
 		this.attack = 10;
 		this.name = name;
 	}
