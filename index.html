@@ -9,7 +9,7 @@
 <body>
 
 <!-- this whole div will be hidden at start of game. -->
-  <div id="resultDiv">
+  <div id="resultDiv" hidden>
     <!-- results/end of game announcement goes here. -->
     <div id="results">
     </div>
@@ -24,24 +24,24 @@
 
       <!-- Left character div -->
       <div class="col col-xs-4">
-        <div id="infoPlayer1">
+        <div id="heroInfo">
         </div>
-        <div id="currentHealthPlayer1">
+        <div id="currentHeroHealth">
         </div>
       </div>
 
       <!-- attack button div -->
-      <div class = "col col-xs-2">   
+      <div class = "col col-xs-2">
       <button id ="attackButton" class="btn btn-lg btn-danger">ATTACK</button>
       </div>
 
       <!-- Right character div -->
       <div class= "col col-xs-4">
-        <div id="infoPlayer2">
+        <div id="enemyInfo">
         </div>
-        <div id="currentHealthPlayer2">
+        <div id="currentEnemyHealth">
         </div>
-      </div> 
+      </div>
 
       <!-- Right empty column div for centering -->
       <div class = "col col-xs-1">
@@ -49,5 +49,14 @@
 
     </div>
   </div>
+
+  <!-- Battle Log goes here. -->
+  <div id="battleLog">
+  </div>
+
+  <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="javascripts/hero.js"></script>
+  <script type="text/javascript" src="javascripts/enemy.js"></script>
+  <script type="text/javascript" src="javascripts/foodfight.js"></script>
 </body>
 </html>
