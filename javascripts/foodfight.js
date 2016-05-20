@@ -5,18 +5,19 @@ var FoodFight = (function(fight) {
   var enemy = FoodFight.player2;
 
   //TODO:output player 1 info to dom info div. 
+  $("#heroInfo").text(`${hero.name}`);
   
   //TODO: output player 2 info to dom info div. 
-  
+  $("#enemyInfo").text(`${enemy.name}`);
 
   var currentHeroHealth = hero.health;
 
   var currentEnemyHealth = enemy.health;
 
-  //initial output to dom of current health. 
+  //initial output to dom of current health. We also use this function as part of the attack button. 
   fight.outputCurrentHealths = function() {
-    $("#currentHealthPlayer1").text(`Current Health: ${currentHeroHealth}`);
-    $("#currentHealthPlayer2").text(`Current Health: ${currentEnemyHealth}`);
+    $("#currentHeroHealth").text(`Current Health: ${currentHeroHealth}`);
+    $("#currentEnemyHealth").text(`Current Health: ${currentEnemyHealth}`);
   }
 
   fight.outputCurrentHealths();  
@@ -29,15 +30,17 @@ var FoodFight = (function(fight) {
     var heroAttack= Math.floor(Math.random() * (hero.attack + 1));
     var enemyAttack = Math.floor(Math.random()* (enemy.attack + 1));
 
-    console.log("player 1 hit", heroAttack );
-    console.log("player 2 hit", enemyAttack );
+    
 
     //subtract current damage from health. 
     fight.updateHeroHealth(enemyAttack);
     fight.updateEnemyHealth(heroAttack);
-    //update dom.
+    //update DOM.
     fight.outputCurrentHealths();
     fight.logAttacks(heroAttack, enemyAttack);
+
+    //check if any healths are zero. Hannah is writing this in a separate IIFE and will activate when ready.
+    //Foodfight.checkForDeath();
   })
 
 
@@ -53,9 +56,12 @@ var FoodFight = (function(fight) {
     return currentEnemyHealth;
   }
 
+  //TODO: change 'append' to 'text' later once we feel comfortable with the math. 
   fight.logAttacks = function(heroAttack, enemyAttack) {
-    ${"#"}
+    $("#battleLog").text(`${enemy.name} attacked ${hero.name} and caused ${enemyAttack} damage. ${hero.name} attacked ${enemy.name} and caused ${heroAttack} damage.`)
   }
+
+
 
   return fight;
 } (FoodFight || {}))
