@@ -4,7 +4,10 @@ var FoodFight = (function (results) {
 	var modal = $(".modalDiv");
 
 	function playAgain () {
-		window.location.reload();
+		$("#fight").slideUp();
+		$("#choosey").slideDown();
+		modal.hide("slow");
+		$("#battleLog").text("");
 	}
 
 	results.checkForDeath = function(hero, enemy) {
