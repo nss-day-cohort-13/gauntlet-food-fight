@@ -7,7 +7,7 @@ var FoodFight = (function(hero){
 		this.name = name;
 	}
 
-	hero.player1 = new hero.Player1("Larry");
+	hero.Larry = new hero.Player1("Larry");
 
 	return hero;
 
