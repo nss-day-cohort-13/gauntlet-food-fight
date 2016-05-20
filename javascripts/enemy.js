@@ -3,6 +3,7 @@ var FoodFight = (function(enemy) {
   enemy.Player2 = function () {
     this.health = 50;
     this.attack = 10;
+    this.name = "Mo";
   }
 
   enemy.player2 = new enemy.Player2();
