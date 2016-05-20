@@ -14,7 +14,9 @@ var FoodFight = (function (results) {
 				resultsDiv.append(`<p class="resultP">Sorry you've been defeated. Would you like to play again?</p>`);
 			}
 			else if(enemy <= 0) {
-				resultsDiv.append(`<p class="resultP">You are the victor! Would you like to play again?</p>`)
+				resultsDiv.append(`<p class="resultP">You are the victor! Would you like to play again?</p>`);
+			} else {
+				resultsDiv.append(`<p class="resultP">You have both been defeated. Would you like to play again?`);
 			}
 		}
 		resetBtn.click(playAgain);
@@ -24,5 +26,3 @@ var FoodFight = (function (results) {
 	return results;
 
 })(FoodFight || {})
-
-FoodFight.checkForDeath();
