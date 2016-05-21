@@ -8,55 +8,78 @@
 </head>
 <body>
 
-<!-- this whole div will be hidden at start of game. -->
-  <div id="resultDiv" hidden>
-    <!-- results/end of game announcement goes here. -->
-    <div id="results">
-    </div>
-    <button id="resetButton" class= "btn btn-lg btn-warning">Play Again</button>
-  </div>
-
-  <div class=container-fluid>
+  <section id="choosey" class= "container-fluid">
     <div class="row">
-      <!-- Left empty column div for centering -->
-      <div class="col col-xs-1">
-      </div>
-
-      <!-- Left character div -->
-      <div class="col col-xs-4">
-        <div id="heroInfo">
-        </div>
-        <div id="currentHeroHealth">
-        </div>
-      </div>
-
-      <!-- attack button div -->
-      <div class = "col col-xs-2">
-      <button id ="attackButton" class="btn btn-lg btn-danger">ATTACK</button>
-      </div>
-
-      <!-- Right character div -->
-      <div class= "col col-xs-4">
-        <div id="enemyInfo">
-        </div>
-        <div id="currentEnemyHealth">
-        </div>
-      </div>
-
-      <!-- Right empty column div for centering -->
-      <div class = "col col-xs-1">
-      </div>
-
+<!-- options for character will go here -->
     </div>
-  </div>
+    <button id="characterChosen" class = "btn btn-lg btn-success">fight!</button>
+  </section>
 
-  <!-- Battle Log goes here. -->
-  <div id="battleLog">
-  </div>
+
+
+
+
+  <!-- BATTLE ARENA- hidden until after choosey. -->
+  <section id="fight" hidden>
+
+    <!-- this result div will be hidden until someone dies. . -->
+    <!-- button here till function is worked out to show results -->
+    <div class="modalDiv" hidden>
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <!-- results/end of game announcement goes here. -->
+          <div id="results">
+          </div>
+          <button id="resetButton" class= "btn btn-lg btn-warning">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div class=container-fluid>
+      <div class="row">
+        <!-- Left empty column div for centering -->
+        <div class="col col-xs-1">
+        </div>
+
+        <!-- Left character div -->
+        <div class="col col-xs-4">
+          <div id="heroInfo">
+          </div>
+          <div id="currentHeroHealth">
+          </div>
+        </div>
+
+        <!-- attack button div -->
+        <div class = "col col-xs-2">
+        <button id ="attackButton" class="btn btn-lg btn-danger">ATTACK</button>
+        </div>
+
+        <!-- Right character div -->
+        <div class= "col col-xs-4">
+          <div id="enemyInfo">
+          </div>
+          <div id="currentEnemyHealth">
+          </div>
+        </div>
+
+        <!-- Right empty column div for centering -->
+        <div class = "col col-xs-1">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Battle Log goes here. -->
+    <div id="battleLog">
+    </div>
+  </section>
 
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="javascripts/hero.js"></script>
   <script type="text/javascript" src="javascripts/enemy.js"></script>
   <script type="text/javascript" src="javascripts/foodfight.js"></script>
+  <script type="text/javascript" src = "javascripts/chooseplayer.js"></script>
+  <script type="text/javascript" src="javascripts/results.js"></script>
 </body>
 </html>

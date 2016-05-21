@@ -37,5 +37,4 @@ var FoodFight = (function(enemy) {
   return enemy;
 })(FoodFight ||{});
 
-console.log("FoodFight", FoodFight);
-console.log("PLayer2", FoodFight.Player2);
+
