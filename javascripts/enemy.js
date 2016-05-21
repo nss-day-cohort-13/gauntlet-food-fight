@@ -16,11 +16,11 @@ var FoodFight = (function(enemy) {
 
     //compose the corresponding enemy into the player object
 
-    this.randomEnemy = randomEnemy;
+    this.name = randomEnemy.name;
     };
   };
 
-  enemy.player2 = new enemy.Player2();
+  enemy.player2 = new FoodFight.Player2();
 
   enemy.Paula = new enemy.Player2("Paula Dean");
   enemy.Paula.attackSpecialty = "Heart Attack! She throws a stick of butter";
@@ -38,3 +38,4 @@ var FoodFight = (function(enemy) {
 })(FoodFight ||{});
 
 console.log("FoodFight", FoodFight);
+console.log("PLayer2", FoodFight.Player2);
