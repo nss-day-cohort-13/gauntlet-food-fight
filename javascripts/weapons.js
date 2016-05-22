@@ -12,33 +12,37 @@ var FoodFight = (function(weapons) {
 
   //indiv weapon options
   weapons.chineseTakeout = function() {
+    this.weapon = "chineseTakeout"
     this.weaponName = "Chinese Takeout"; 
     this.addedDamage = 3;
   }
   weapons.chineseTakeout.prototype = weapons.makeBasicWeapon;
 
   weapons.knife = function() {
-    this.weaponName = "Knife"; 
+    this.weapon = "knife"
+    this.weaponName = "a Knife"; 
     this.addedDamage = 3;
   }
   weapons.knife.prototype = weapons.makeBasicWeapon;
 
   weapons.fryingPan = function() {
-    this.weaponName = "Frying Pan"; 
+    this.weapon = "fryingPan";
+    this.weaponName = "a Frying Pan"; 
     this.addedDamage = 3;
   }
   weapons.fryingPan.prototype = weapons.makeBasicWeapon;
 
   weapons.meatTenderizer = function() {
-    this.weaponName = "Meat Tenderizer";
+    this.weapon = "meatTenderizer";
+    this.weaponName = "a Meat Tenderizer";
     this.addedDamage = 3;
   }
 
 
   weapons.setPicture = function(currentHero) {
-    console.log("setting picture now");
 
-    var picture = ``
+    var picture = `pics/${currentHero.species}-${currentHero.weapon.weapon}.jpeg`;
+    return picture;
 
   }
 
