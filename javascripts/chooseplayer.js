@@ -24,7 +24,7 @@ var FoodFight = (function(choose){
   };
 
   choose.generateEnemy= function(){
-    var enemy = FoodFight.player2;
+    var enemy = FoodFight.enemyPlayer.generateEnemy();
     return enemy;
     //set a new enemy using Keith's random thing.
   }
