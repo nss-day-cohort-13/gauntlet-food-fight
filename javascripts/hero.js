@@ -24,7 +24,7 @@ var FoodFight = (function(hero){
 	var Fruit = function (name) {
 		Player1.call(this, name);
 		this.health += 5;
-		this.attack -= 10;
+		this.attack -= 3;
 	}
 	Fruit.prototype = Object.create(Player1.prototype);
 
@@ -60,6 +60,7 @@ var FoodFight = (function(hero){
 
 	hero.Peach = function (name) {
 		Fruit.call(this, name);
+		this.type = "peach";
 		this.specialtyAttack = "Pit Attack";
 	}
 	hero.Peach.prototype = Object.create(Fruit.prototype);
