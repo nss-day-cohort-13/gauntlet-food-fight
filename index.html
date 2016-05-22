@@ -22,11 +22,21 @@
 
 
     </div>
-    <button id="characterChosen" class = "btn btn-lg btn-success">fight!</button>
+    <button id="characterChosen" class = "btn btn-lg btn-success">Next</button>
   </section>
 
 
+  <section id="weapons" class= "container-fluid" hidden>
+    <div class="row">
+    <!-- options for weapon will go here -->
+    <input type="radio" name="weaponChoice" class="weaponBtn" value="knife">Knife</input>
+    <input type="radio" name="weaponChoice" class="weaponBtn" value="meatTenderizer">Meat Tenderizer</input>
+    <input type="radio" name="weaponChoice" class="weaponBtn" value="chineseTakeout">Chinese Takeout</input>
+    <input type="radio" name="weaponChoice" class="weaponBtn" value="fryingPan">Frying Pan</input>
 
+    </div>
+    <button id="weaponChosen" class = "btn btn-lg btn-success">Fight!</button>
+  </section>
 
 
   <!-- BATTLE ARENA- hidden until after choosey. -->
@@ -86,6 +96,7 @@
 
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type = "text/javascript" src = "javascripts/weapons.js"></script>
   <script type="text/javascript" src="javascripts/hero.js"></script>
   <script type="text/javascript" src="javascripts/enemy.js"></script>
   <script type="text/javascript" src="javascripts/foodfight.js"></script>
