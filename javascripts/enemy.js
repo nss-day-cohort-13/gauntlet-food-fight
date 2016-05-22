@@ -7,21 +7,21 @@ var FoodFight = (function(enemy) {
     this.health = 50;
     this.attack = Math.floor(Math.random()*20 + 1) + 1;
     this.allowedEnemies = [enemy.Paula, enemy.Gordon, enemy.Lovett, enemy.Guy];
+    this.generateEnemy = function() {
+    // get a random index from the name array
+    var random = Math.round(Math.random() * (enemy.Player2.allowedEnemies.length -1));
+
+    //get the string at the index
+    var randomEnemy = enemy.Player2.allowedEnemies[random];
+
+    //compose the corresponding enemy into the player object
+
+    // this.name = randomEnemy.name;
+    return randomEnemy;
+    };
   };
-  enemy.Player2.generateEnemy = function() {
-  // get a random index from the name array
-  var random = Math.round(Math.random() * (enemy.Player2.allowedEnemies.length -1));
 
-  //get the string at the index
-  var randomEnemy = enemy.Player2.allowedEnemies[random];
-
-  //compose the corresponding enemy into the player object
-
-  // this.name = randomEnemy.name;
-  return randomEnemy;
-  };
-
-  enemy.Player2 = new FoodFight.Player2();
+  enemy.enemyPlayer = new FoodFight.Player2()
 
   enemy.Paula = new enemy.Player2("Paula Dean");
   enemy.Paula.attackSpecialty = "Heart Attack! She throws a stick of butter";
