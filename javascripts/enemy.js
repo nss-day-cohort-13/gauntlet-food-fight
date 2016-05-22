@@ -21,7 +21,6 @@ var FoodFight = (function(enemy) {
     };
   };
 
-  enemy.enemyPlayer = new FoodFight.Player2()
 
   enemy.Paula = new enemy.Player2("Paula Dean");
   enemy.Paula.attackSpecialty = "Heart Attack! She throws a stick of butter";
@@ -40,6 +39,7 @@ var FoodFight = (function(enemy) {
   enemy.Guy = new enemy.Player2("Guy Fiere");
   enemy.Guy.attackSpecialty = "Offensive Appearance! You are sick from watching Guy Fiere eat.";
 
+  enemy.enemyPlayer = new FoodFight.Player2()
   return enemy;
 })(FoodFight ||{});
 
