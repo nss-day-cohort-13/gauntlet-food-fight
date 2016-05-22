@@ -10,10 +10,10 @@ var FoodFight = (function(enemy) {
   };
   enemy.Player2.generateEnemy = function() {
   // get a random index from the name array
-  var random = Math.round(Math.random() * (this.allowedEnemies.length -1));
+  var random = Math.round(Math.random() * (enemy.Player2.allowedEnemies.length -1));
 
   //get the string at the index
-  var randomEnemy = this.allowedEnemies[random];
+  var randomEnemy = enemy.Player2.allowedEnemies[random];
 
   //compose the corresponding enemy into the player object
 
