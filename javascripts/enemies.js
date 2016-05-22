@@ -15,6 +15,6 @@ Gauntlet.Combatants.Orc = function() {
     return this.class;
   }
 };
-
+console.log(Orc);
 Gauntlet.Combatants.Orc.prototype = new Gauntlet.Combatants.Monster();
 
