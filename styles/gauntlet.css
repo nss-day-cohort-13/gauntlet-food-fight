@@ -15,6 +15,7 @@ img {
 #weapons {
   margin: 5%;
   border: 10px solid #b22222;
+  box-shadow: 1px 1px 20px rgb(94, 17, 17);
   border-radius: 1em;
 }
 
@@ -24,10 +25,16 @@ img {
   font-size: 1.2em;
 }
 
+.heroBtn,
+.weaponBtn {
+  margin: 5px;
+}
+
 /*Fight page*/
 
 #fight {
   border: 10px solid #b22222;
+  box-shadow: 0 0 10px rgb(94, 17, 17);
   border-radius: 1em;
 }
 .attackBtn {
