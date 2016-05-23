@@ -85,7 +85,7 @@ var FoodFight = (function(fight) {
 
     $("#battleLog").text("");
 
-    var currentLog = $(`<p>${enemy.name} attacks ${hero.name} with ${enemy.generateAttack()} This attack does ${enemyAttack} damage.</p> <p>${hero.name} attacks ${enemy.name} with ${hero.specialtyAttack}. This attack does ${heroAttack} damage.</p>`);
+    var currentLog = $(`<p><span class="insertText">${enemy.name}</span> attacks <span class="insertText">${hero.name}</span> with <span class="insertText">${enemy.generateAttack()}</span> This attack does <span class="insertText">${enemyAttack}</span> damage.</p> <p><span class="insertText">${hero.name}</span> attacks <span class="insertText">${enemy.name}</span> with <span class="insertText">${hero.specialtyAttack}</span>. This attack does <span class="insertText">${heroAttack}</span> damage.</p>`);
     currentLog.hide().appendTo("#battleLog").fadeIn();
 
   }
@@ -97,14 +97,14 @@ var FoodFight = (function(fight) {
     herobonus.forEach(function(bonusobject) {
       currentEnemyHealth -= bonusobject.attackPoints || 0;
       currentHeroHealth += bonusobject.healthPoints || 0;
-      var bonusMessage = $(`<p>${bonusobject.message}</p>`);
+      var bonusMessage = $(`<p class="bonus">${bonusobject.message}</p>`);
       bonusMessage.hide().appendTo("#bonusLog").delay(400).fadeIn();
       setTimeout(function (){fight.outputCurrentHealths()}, 1000);
     })
     enemybonus.forEach(function(bonusobject) {
-      currentEnemyHealth += bonusobject.healthPoints || 0; 
+      currentEnemyHealth += bonusobject.healthPoints || 0;
       currentHeroHealth -= bonusobject.attackPoints || 0;
-      var bonusMessage = $(`<p>${bonusobject.message}</p>`);
+      var bonusMessage = $(`<p class="bonus">${bonusobject.message}</p>`);
       bonusMessage.hide().appendTo("#bonusLog").delay(400).fadeIn();
       setTimeout(function() {fight.outputCurrentHealths()}, 1000);
     })
