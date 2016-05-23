@@ -14,13 +14,13 @@ var FoodFight = (function(bonus) {
     }
     //meat eater
     if (hero.type === "Meat" && enemy.name === "Mrs. Lovett") {
-      enemyBonus.push({name: "meatEater", healthPoints: -2, message: "Mrs. Lovett loves Meat. Health reduced by 2."})
+      enemyBonus.push({name: "meatEater", attackPoints: -2, message: "Mrs. Lovett loves Meat. Hero health reduced by 2."})
 
       //vegetable chopper
     } else if (hero.type === "Vegetable" && enemy.name === "Gordon Ramsey") {
-      enemyBonus.push({name: "chopper", attackPoints: 1, message: "Gordon Ramsey is great at chopping. +1 attack points."})
+      enemyBonus.push({name: "chopper", attackPoints: 1, message: "Gordon Ramsey is great at chopping. +1 enemy attack."})
     }else {
-      heroBonus.push({name: "none", attackPoints: 0, message: "no bonus"})
+      heroBonus.push({name: "none", attackPoints: 1, healthPoints: 1, message: "no bonus."})
     }
   }
 

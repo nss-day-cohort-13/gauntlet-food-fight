@@ -56,8 +56,10 @@ var FoodFight = (function(fight) {
     fight.updateHeroHealth(enemyAttack);
     fight.updateEnemyHealth(heroAttack);
     //update DOM.
-    fight.outputCurrentHealths();
     fight.logAttacks(heroAttack, enemyAttack);
+
+    FoodFight.addBonuses();
+    fight.outputCurrentHealths();
 
     //check if any healths are zero.
     FoodFight.checkForDeath(currentHeroHealth, currentEnemyHealth, hero, enemy);
@@ -79,6 +81,20 @@ var FoodFight = (function(fight) {
   fight.logAttacks = function(heroAttack, enemyAttack) {
     $("#battleLog").text(`${enemy.name} attacked ${hero.name} with ${enemy.attackSpecialty} and caused ${enemyAttack} damage. ${hero.name} attacked ${enemy.name} with ${hero.specialtyAttack}. This attack caused ${heroAttack} damage.`)
   }
+
+  fight.addBonuses = function() {
+    hero.bonus.forEach(function(bonusobject) {
+      currentEnemyHealth += bonusobject.attackPoints || 0;
+      currentHeroHealth += bonusobject.healthPoints || 0;
+      $("#battleLog").append(`<p>${bonusobject.message}</p>`)
+    })
+    enemy.bonus.forEach(function(bonusobject) {
+      currentEnemyHealth += bonusobject.healthPoints || 0; 
+      currentHeroHealth += bonusobject.attackPoints || 0;
+      $("#battleLog").append(`<p>${bonusobject.message}</p>`)
+    })
+  }
+
 
 
 
