@@ -1,7 +1,7 @@
 "use strict";
 var FoodFight = (function(hero){
 
-	//generic class 
+	//generic class
 	var Player1 = function (name) {
 		this.health = 50;
 		this.attack = 10;

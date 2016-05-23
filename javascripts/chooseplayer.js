@@ -4,7 +4,7 @@ var FoodFight = (function(choose){
   var userName = $("#name");
   var selected, weaponChosen;
   //event listener to set character and show weapon choice.
-  
+
 
   $("#characterChosen").on("click", function() {
     currentHero = choose.setHero();
@@ -19,7 +19,9 @@ var FoodFight = (function(choose){
     currentHero.weapon = choose.setWeapon();
     currentHero.picture = FoodFight.setPicture(currentHero);
     currentEnemy = choose.generateEnemy();
-    
+    // currentEnemy.picture = FoodFight.setPicture(currentEnemy);
+    currentEnemy.weapon = FoodFight.enemyPlayer.generateWeapon();
+
     console.log("current hero", currentHero );
     console.log("current enemy", currentEnemy );
     FoodFight.setUpGame(currentHero, currentEnemy);
