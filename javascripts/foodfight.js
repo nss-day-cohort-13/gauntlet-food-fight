@@ -1,5 +1,5 @@
 var FoodFight = (function(fight) {
-  
+
   var currentHeroHealth, currentEnemyHealth, hero, enemy;
 
   fight.setUpGame = function(currentHero, currentEnemy) {
@@ -13,25 +13,25 @@ var FoodFight = (function(fight) {
   $("#heroInfo").html(
     `<h1>${hero.name}</h1>
     <h3>a ${hero.species} with ${hero.weapon.weaponName}</h3>
-    <img id="heroimg" class = "img-responsive" src = "${hero.picture}" alt = "picture">
-    <p>Max Health: ${hero.health}</p>`
+    <p>Max Health: ${hero.health}</p>
+    <img id="heroimg" class = "img-responsive" src = "${hero.picture}" alt = "picture">`
     );
-  //output enemy info to the dom. 
+  //output enemy info to the dom.
   $("#enemyInfo").html(`<h1>${enemy.name}</h1><p>Max Health: ${enemy.health}</p><p>Randomized Max Attack: ${enemy.attack}</p>`);
-  
-  //set current health to current max health. 
+
+  //set current health to current max health.
   currentHeroHealth = hero.health;
   currentEnemyHealth = enemy.health;
 
   FoodFight.setBonuses(hero, enemy);
   fight.outputBonuses();
 
-  //initial output of health to dom. 
-  fight.outputCurrentHealths();  
+  //initial output of health to dom.
+  fight.outputCurrentHealths();
   }
 
 
-  // We also use this function as part of the attack button. 
+  // We also use this function as part of the attack button.
 
   fight.outputCurrentHealths = function() {
     $("#currentHeroHealth").text(`Current Health: ${currentHeroHealth}`);

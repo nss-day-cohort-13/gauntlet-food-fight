@@ -23,42 +23,51 @@
 
   <section id="choosey" class= "container-fluid">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-md-12 choose">
         <img src="pics/foodFightTitle.png" alt="FoodFight">
       </div>
-      <div class="col-lg-12">
+      <div class="col-md-12 choose">
         <img src="pics/chooseChar.png" alt="">
       </div>
-      <div class="col-lg-12">
+      <div class="col-md-12 choose">
         <label for="name">What is your name?</label>
         <input type="text" id="name" class="name">
       </div>
-      <div class="col-lg-12 radioBtn">
+      <div class="col-md-12 radioBtn choose">
         <!-- options for character will go here -->
-        <input type="radio" name="heroChoice" class="heroBtn" value="Tomato">Tomato</input>
-        <input type="radio" name="heroChoice" class="heroBtn" value="Potato">Potato</input>
-        <input type="radio" name="heroChoice" class="heroBtn" value="Cow">Cow</input>
-        <input type="radio" name="heroChoice" class="heroBtn" value="Lobster">Lobster</input>
-        <input type="radio" name="heroChoice" class="heroBtn" value="Apple">Apple</input>
-        <input type="radio" name="heroChoice" class="heroBtn" value="Peach">Peach</input>
+        <input type="radio" name="heroChoice" class="heroBtn" value="Tomato">Tomato
+        <input type="radio" name="heroChoice" class="heroBtn" value="Potato">Potato
+        <input type="radio" name="heroChoice" class="heroBtn" value="Cow">Cow
+        <input type="radio" name="heroChoice" class="heroBtn" value="Lobster">Lobster
+        <input type="radio" name="heroChoice" class="heroBtn" value="Apple">Apple
+        <input type="radio" name="heroChoice" class="heroBtn" value="Peach">Peach
       </div>
-    </div>
-    <div class="col-lg-12">
-      <button id="characterChosen" class = "btn btn-lg btn-success">Next</button>
+      <div class="col-md-12 choose">
+        <button id="characterChosen" class = "btn btn-md btn-success">Next</button>
+      </div>
     </div>
   </section>
 
 
   <section id="weapons" class= "container-fluid" hidden>
     <div class="row">
-    <!-- options for weapon will go here -->
-    <input type="radio" name="weaponChoice" class="weaponBtn" value="knife">Knife</input>
-    <input type="radio" name="weaponChoice" class="weaponBtn" value="meatTenderizer">Meat Tenderizer</input>
-    <input type="radio" name="weaponChoice" class="weaponBtn" value="chineseTakeout">Chinese Takeout</input>
-    <input type="radio" name="weaponChoice" class="weaponBtn" value="fryingPan">Frying Pan</input>
-
+      <div class="col-md-12 choose">
+        <img src="pics/foodFightTitle.png" alt="FoodFight">
+      </div>
+      <div class='col-md-12 choose'>
+        <img src="pics/chooseWeapon.png" alt="Choose your Weapons:">
+      </div>
+      <!-- options for weapon will go here -->
+      <div class='col-md-12 choose'>
+        <input type="radio" name="weaponChoice" class="weaponBtn" value="knife">Knife</input>
+        <input type="radio" name="weaponChoice" class="weaponBtn" value="meatTenderizer">Meat Tenderizer</input>
+        <input type="radio" name="weaponChoice" class="weaponBtn" value="chineseTakeout">Chinese Takeout</input>
+        <input type="radio" name="weaponChoice" class="weaponBtn" value="fryingPan">Frying Pan</input>
+      </div>
+      <div class='col-md-12 choose'>
+        <button id="weaponChosen" class = "btn btn-md btn-success">Fight!</button>
+      </div>
     </div>
-    <button id="weaponChosen" class = "btn btn-lg btn-success">Fight!</button>
   </section>
 
 
@@ -66,43 +75,30 @@
   <section id="fight" hidden>
 
     <!-- this result div will be hidden until someone dies. . -->
-    <!-- button here till function is worked out to show results -->
 
 
     <div class=container-fluid>
       <div class="row">
-        <!-- Left empty column div for centering -->
-        <div class="col col-xs-1">
-        </div>
-
         <!-- Left character div -->
-        <div class="col col-xs-4">
+        <div class="col-md-4 fight">
           <div id="heroInfo">
           </div>
           <div id="currentHeroHealth">
           </div>
+        </div> <!-- left div end -->
+        <!-- Attack button -->
+        <div class= "col-md-4 fight attackBtn">
+          <button id ="attackButton" class="btn btn-md btn-danger">ATTACK</button>
         </div>
-
-        <!-- attack button div -->
-        <div class = "col col-xs-2">
-        <button id ="attackButton" class="btn btn-lg btn-danger">ATTACK</button>
-        </div>
-
         <!-- Right character div -->
-        <div class= "col col-xs-4">
+        <div class= "col-md-4 fight">
           <div id="enemyInfo">
           </div>
           <div id="currentEnemyHealth">
           </div>
-        </div>
-
-        <!-- Right empty column div for centering -->
-        <div class = "col col-xs-1">
-        </div>
-
+        </div> <!-- right div end -->
       </div>
     </div>
-
     <!-- Battle Log goes here. -->
     <div id="battleLog">
     </div>

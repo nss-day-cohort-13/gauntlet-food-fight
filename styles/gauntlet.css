@@ -3,20 +3,50 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 2em;
+  background-color: rgb(233, 233, 233);
 }
-section {
+
+/*Char and weapon page*/
+
+#choosey,
+#weapons {
   margin: 5%;
   border: 10px solid #b22222;
   border-radius: 1em;
 }
 
-/*Front Page*/
-.col-lg-12 {
+.choose {
   text-align: center;
   margin: 1em auto;
 }
 
+/*Fight page*/
 
+#fight {
+  border: 10px solid #b22222;
+  border-radius: 1em;
+}
+.attackBtn {
+  text-align: center;
+}
+
+.battleLog {
+  border: 3px solid #b22222;
+  border-radius: 1em;
+}
+
+#heroInfo,
+#enemyInfo {
+  color: blue;
+  font-size: 1.5em;
+  text-align: center;
+}
+#currentEnemyHealth,
+#currentHeroHealth {
+  color: green;
+  font-size: 1.5em;
+  text-align: center;
+}
 
 /*
   Button styles
