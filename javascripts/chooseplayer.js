@@ -14,17 +14,21 @@ var FoodFight = (function(choose){
 
   //event listener to set weapon choice and set up game.
   $("#weaponChosen").on("click", function() {
-    $("#fight").slideDown();
-    $("#weapons").slideUp();
-    currentHero.weapon = choose.setWeapon();
-    currentHero.picture = FoodFight.setPicture(currentHero);
-    currentEnemy = choose.generateEnemy();
-    // currentEnemy.picture = FoodFight.setPicture(currentEnemy);
-    currentEnemy.weapon = FoodFight.enemyPlayer.generateWeapon();
 
-    console.log("current hero", currentHero );
-    console.log("current enemy", currentEnemy );
-    FoodFight.setUpGame(currentHero, currentEnemy);
+    if (weaponChosen === undefined) {
+      alert("hey, pick a weapon! You don't want to be weaponless in the fight against this chef!")
+    } else {
+      $("#fight").slideDown();
+      $("#weapons").slideUp();
+      currentHero.weapon = choose.setWeapon();
+      currentHero.picture = FoodFight.setPicture(currentHero);
+      currentEnemy = choose.generateEnemy();
+      
+      console.log("current hero", currentHero );
+      console.log("current enemy", currentEnemy );
+      FoodFight.setUpGame(currentHero, currentEnemy);
+    }
+
   });
 
   heroBtn.click(function() {
@@ -46,7 +50,7 @@ var FoodFight = (function(choose){
 
   choose.setWeapon = function() {
     console.log("weapon chosen", weaponChosen );
-    var currentWeapon = new FoodFight[weaponChosen]();
+    var currentWeapon = new FoodFight.weaponOptions[weaponChosen]();
     return currentWeapon;
   }
 
