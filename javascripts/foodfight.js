@@ -14,10 +14,14 @@ var FoodFight = (function(fight) {
     `<h1>${hero.name}</h1>
     <h3>a ${hero.species} with ${hero.weapon.weaponName}</h3>
 
+    <h3>Current Hero Health: <span id="currentHeroHealth"></span></h3>
+
     <img id="heroimg" class = "img-responsive" src = "${hero.picture}" alt = "picture">`
     );
   //output enemy info to the dom.
-  $("#enemyInfo").html(`<h1>${enemy.name}</h1><p>Randomized Max Attack: ${enemy.attack}</p>`);
+  $("#enemyInfo").html(`<h1>${enemy.name}</h1>
+    <h3>Current Enemy Health: <span id="currentEnemyHealth"></span</h3>
+    <p>Randomized Max Attack: ${enemy.attack}</p>`);
 
   //set current health to current max health.
   currentHeroHealth = hero.health;
@@ -33,8 +37,8 @@ var FoodFight = (function(fight) {
   // We also use this function as part of the attack button.
 
   fight.outputCurrentHealths = function() {
-    var replacementHeroHealth = $(`<div id = "currentHeroHealth">Current Health: ${currentHeroHealth}</div>`).hide();
-    var replacementEnemyHealth = $(`<div id="currentEnemyHealth">Current Health: ${currentEnemyHealth}</div>`).hide();
+    var replacementHeroHealth = $(`<span id ="currentHeroHealth">${currentHeroHealth}</span>`).hide();
+    var replacementEnemyHealth = $(`<span id="currentEnemyHealth">${currentEnemyHealth}</span>`).hide();
     $("#currentHeroHealth").fadeOut();
     $("#currentHeroHealth").replaceWith(replacementHeroHealth);
     $("#currentHeroHealth").fadeIn();
