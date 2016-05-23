@@ -17,7 +17,7 @@ var FoodFight = (function(fight) {
     <p>Max Health: ${hero.health}</p>`
     );
   //output enemy info to the dom. 
-  $("#enemyInfo").html(`<h1>${enemy.name}</h1><p>Max Health: ${enemy.health}</p>`);
+  $("#enemyInfo").html(`<h1>${enemy.name}</h1><p>Max Health: ${enemy.health}</p><p>Randomized Max Attack: ${enemy.attack}</p>`);
   
   //set current health to current max health. 
   currentHeroHealth = hero.health;
