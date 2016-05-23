@@ -7,6 +7,8 @@ var FoodFight = (function(enemy) {
     this.health = 50;
     this.attack = Math.floor(Math.random()*20 + 1) + 1;
     this.allowedEnemies = [enemy.Paula, enemy.Gordon, enemy.Lovett, enemy.Guy];
+    this.bonus = [];
+
     this.generateEnemy = function() {
     // get a random index from the name array
     var random = Math.round(Math.random() * (this.allowedEnemies.length -1));

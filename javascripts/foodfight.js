@@ -16,14 +16,14 @@ var FoodFight = (function(fight) {
     <img id="heroimg" class = "img-responsive" src = "${hero.picture}" alt = "picture">
     <p>Max Health: ${hero.health}</p>`
     );
-
-
-
+  //output enemy info to the dom. 
   $("#enemyInfo").html(`<h1>${enemy.name}</h1><p>Max Health: ${enemy.health}</p>`);
   
   //set current health to current max health. 
   currentHeroHealth = hero.health;
   currentEnemyHealth = enemy.health;
+
+  FoodFight.setBonuses(hero, enemy);
 
   //initial output of health to dom. 
   fight.outputCurrentHealths();  

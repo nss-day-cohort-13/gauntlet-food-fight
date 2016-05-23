@@ -6,6 +6,7 @@ var FoodFight = (function(hero){
 		this.health = 50;
 		this.attack = 10;
 		this.name = name;
+		this.bonus = [];
 	}
 
 
