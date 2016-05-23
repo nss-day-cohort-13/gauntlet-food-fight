@@ -24,6 +24,7 @@ var FoodFight = (function(fight) {
   currentEnemyHealth = enemy.health;
 
   FoodFight.setBonuses(hero, enemy);
+  fight.outputBonuses();
 
   //initial output of health to dom. 
   fight.outputCurrentHealths();  
@@ -37,7 +38,9 @@ var FoodFight = (function(fight) {
     $("#currentEnemyHealth").text(`Current Health: ${currentEnemyHealth}`);
   }
 
-
+  fight.outputBonuses = function() {
+    console.log("hero bonus", hero.bonus );
+  }
 
 
   //event listener for attack button.
