@@ -8,8 +8,10 @@ var FoodFight = (function (results) {
 		$("#choosey").slideDown();
 		modalDiv.modal("hide");
 		$("#battleLog").text("");
+		$("#bonusLog").text("");
 		$("#name").val("");
 		$(".heroBtn").prop('checked', false);
+		$(".weaponBtn").prop('checked',false);
 	}
 
 	results.checkForDeath = function(currentHeroHealth, currentEnemyHealth, hero, enemy) {

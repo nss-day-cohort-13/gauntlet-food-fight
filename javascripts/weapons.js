@@ -7,36 +7,37 @@ var FoodFight = (function(weapons) {
     this.addedDamage = "";
     this.picture = "";
   }
-  weapons.makeBasicWeapon = new basicWeapon();
-
+   
+  weapons.weaponOptions = {};
 
   //indiv weapon options
-  weapons.chineseTakeout = function() {
+  weapons.weaponOptions.chineseTakeout = function() {
     this.weapon = "chineseTakeout"
     this.weaponName = "Chinese Takeout";
     this.addedDamage = 3;
   }
-  weapons.chineseTakeout.prototype = weapons.makeBasicWeapon;
+  weapons.weaponOptions.chineseTakeout.prototype = new basicWeapon();
 
-  weapons.knife = function() {
+  weapons.weaponOptions.knife = function() {
     this.weapon = "knife"
     this.weaponName = "a Knife";
     this.addedDamage = 3;
   }
-  weapons.knife.prototype = weapons.makeBasicWeapon;
+  weapons.weaponOptions.knife.prototype = new basicWeapon();
 
-  weapons.fryingPan = function() {
+  weapons.weaponOptions.fryingPan = function() {
     this.weapon = "fryingPan";
     this.weaponName = "a Frying Pan";
     this.addedDamage = 3;
   }
-  weapons.fryingPan.prototype = weapons.makeBasicWeapon;
+  weapons.weaponOptions.fryingPan.prototype = new basicWeapon();
 
-  weapons.meatTenderizer = function() {
+  weapons.weaponOptions.meatTenderizer = function() {
     this.weapon = "meatTenderizer";
     this.weaponName = "a Meat Tenderizer";
     this.addedDamage = 3;
   }
+  weapons.weaponOptions.meatTenderizer.prototype = new basicWeapon();
 
   //setting after current hero is chosen, since there are 24 different picture options.
   weapons.setPicture = function(currentHero) {
