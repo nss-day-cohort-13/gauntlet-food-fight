@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Food Fight!</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="styles/gauntlet.css">
 </head>
 <body>
 <!--  -->
@@ -21,19 +23,29 @@
 
   <section id="choosey" class= "container-fluid">
     <div class="row">
-    <label for="name">What is your name?</label>
-    <input type="text" id="name">
-    <!-- options for character will go here -->
-    <input type="radio" name="heroChoice" class="heroBtn" value="Tomato">Tomato</input>
-    <input type="radio" name="heroChoice" class="heroBtn" value="Potato">Potato</input>
-    <input type="radio" name="heroChoice" class="heroBtn" value="Cow">Cow</input>
-    <input type="radio" name="heroChoice" class="heroBtn" value="Lobster">Lobster</input>
-    <input type="radio" name="heroChoice" class="heroBtn" value="Apple">Apple</input>
-    <input type="radio" name="heroChoice" class="heroBtn" value="Peach">Peach</input>
-
-
+      <div class="col-lg-12">
+        <img src="pics/foodFightTitle.png" alt="FoodFight">
+      </div>
+      <div class="col-lg-12">
+        <img src="pics/chooseChar.png" alt="">
+      </div>
+      <div class="col-lg-12">
+        <label for="name">What is your name?</label>
+        <input type="text" id="name" class="name">
+      </div>
+      <div class="col-lg-12 radioBtn">
+        <!-- options for character will go here -->
+        <input type="radio" name="heroChoice" class="heroBtn" value="Tomato">Tomato</input>
+        <input type="radio" name="heroChoice" class="heroBtn" value="Potato">Potato</input>
+        <input type="radio" name="heroChoice" class="heroBtn" value="Cow">Cow</input>
+        <input type="radio" name="heroChoice" class="heroBtn" value="Lobster">Lobster</input>
+        <input type="radio" name="heroChoice" class="heroBtn" value="Apple">Apple</input>
+        <input type="radio" name="heroChoice" class="heroBtn" value="Peach">Peach</input>
+      </div>
     </div>
-    <button id="characterChosen" class = "btn btn-lg btn-success">Next</button>
+    <div class="col-lg-12">
+      <button id="characterChosen" class = "btn btn-lg btn-success">Next</button>
+    </div>
   </section>
 
 
@@ -55,7 +67,7 @@
 
     <!-- this result div will be hidden until someone dies. . -->
     <!-- button here till function is worked out to show results -->
-  
+
 
     <div class=container-fluid>
       <div class="row">
