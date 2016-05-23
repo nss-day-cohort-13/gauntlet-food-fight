@@ -13,8 +13,8 @@ var FoodFight = (function(fight) {
   $("#heroInfo").html(
     `<h1>${hero.name}</h1>
     <h3>a ${hero.species} with ${hero.weapon.weaponName}</h3>
-    <img id="heroimg" class = "img-responsive" src = "${hero.picture}" alt = "picture">
-    <p>Max Health: ${hero.health}</p>`
+    <p>Max Health: ${hero.health}</p>
+    <img id="heroimg" class = "img-responsive" src = "${hero.picture}" alt = "picture">`
     );
   //output enemy info to the dom.
   $("#enemyInfo").html(`<h1>${enemy.name}</h1><p>Max Health: ${enemy.health}</p><p>Randomized Max Attack: ${enemy.attack}</p>`);

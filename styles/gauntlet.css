@@ -1,105 +1,85 @@
 body {
-  font-family: "Lato", "Helvetica", "sans-serif";
+  font-family: 'VT323', "Helvetica", "sans-serif";
   margin: 0;
-  padding: 10px;
-  font-size: 3em;
+  padding: .5em;
+  font-size: 2em;
+  background-color: rgb(233, 233, 233);
+}
+img {
+  margin: auto;
 }
 
-.field {
-  margin: 20px 0 0 0;
+/*Char and weapon page*/
+
+#choosey,
+#weapons {
+  margin: 5%;
+  border: 10px solid #b22222;
+  box-shadow: 1px 1px 20px rgb(94, 17, 17);
+  border-radius: 1em;
 }
 
-.field__textinput {
-  font-size: 1em;
-  padding: 15px 0;
+.choose {
   text-align: center;
-  min-width: 500px;
+  margin: 1em auto;
+  font-size: 1.2em;
 }
 
-
-
-/*
-  Section styles
- */
-.card { 
-  display: none;
+.heroBtn,
+.weaponBtn {
+  margin: 5px;
 }
 
-.card__prompt {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-}
+/*Fight page*/
 
-.card__button {
-  font-size: 1.1em;
-  margin: 30px 0 0 0;
+#fight {
+  border: 10px solid #b22222;
+  box-shadow: 0 0 10px rgb(94, 17, 17);
+  border-radius: 1em;
+}
+.attackBtn {
   text-align: center;
 }
 
+.battleLog {
+  border: 3px solid #b22222;
+  border-radius: 1em;
+}
 
-/*
-  Button styles
- */
+#heroInfo,
+#enemyInfo {
+  color: blue;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#currentEnemyHealth,
+#currentHeroHealth {
+  color: green;
+  font-size: 1.5em;
+  text-align: center;
+}
+#heroimg {
+  margin: auto;
+}
+
+/*Modal styling*/
+.modalDiv {
+  text-align: center;
+}
+
+/*  Button styles*/
+
 
 .btn {
   text-decoration: none;
   background-color: white;
-  color: #888;
+  color: black;
   border-radius: 5px;
-  display: inline-block;
   margin: 10px;
-  font-size: 18px;
+  font-size: 1.5em;
   text-transform: uppercase;
-  font-weight: 600;
   padding: 10px 5px;
-  min-width: 260px;
+  width: 50%;
 }
 
-.btn--orange {
-  border-color: #FF4136;
-  color: white;
-  background-color: #FF4136;
-}
-
-.btn--blue {
-  border-color: #0074D9;
-  color: white;
-  background-color: #0074D9;
-}
-
-.btn--yellow {
-  border-color: #E4BD00;
-  color: white;
-  background-color: #F3C500;
-}
-
-.btn--big {
-  font-size: 28px;
-  padding: 10px;
-  font-weight: 400;
-}
-
-.btn--small {
-  min-width: 50px;
-}
-
-.btn__prompt {
-  background-color: white;
-  color: #fff;
-  padding-right: 12px;
-  padding-left: 12px;
-  margin-right: -10px;
-  font-weight: 600;
-  background-color: #333;
-  opacity: .4;
-  border-radius: 5px 0 0 5px;
-  left: 37px;
-  float: left;
-}
-
-.btn__text {
-  padding: 0 50px 0 20px;
-  border-radius: 0 5px 5px 0;
-}
