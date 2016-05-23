@@ -38,7 +38,7 @@ var FoodFight = (function(weapons) {
     this.addedDamage = 3;
   }
 
-
+  //setting after current hero is chosen, since there are 24 different picture options.
   weapons.setPicture = function(currentHero) {
 
     var picture = `pics/${currentHero.species}-${currentHero.weapon.weapon}.jpeg`;
