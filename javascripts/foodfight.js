@@ -1,5 +1,5 @@
 var FoodFight = (function(fight) {
-  
+
   var currentHeroHealth, currentEnemyHealth, hero, enemy;
 
   fight.setUpGame = function(currentHero, currentEnemy) {
@@ -13,24 +13,24 @@ var FoodFight = (function(fight) {
   $("#heroInfo").html(
     `<h1>${hero.name}</h1>
     <h3>a ${hero.species} with ${hero.weapon.weaponName}</h3>
-    <img id="heroimg" class = "img-responsive" src = "${hero.picture}" alt = "picture">
-    <p>Max Health: ${hero.health}</p>`
+
+    <img id="heroimg" class = "img-responsive" src = "${hero.picture}" alt = "picture">`
     );
-  //output enemy info to the dom. 
-  $("#enemyInfo").html(`<h1>${enemy.name}</h1><p>Max Health: ${enemy.health}</p><p>Randomized Max Attack: ${enemy.attack}</p>`);
-  
-  //set current health to current max health. 
+  //output enemy info to the dom.
+  $("#enemyInfo").html(`<h1>${enemy.name}</h1><p>Randomized Max Attack: ${enemy.attack}</p>`);
+
+  //set current health to current max health.
   currentHeroHealth = hero.health;
   currentEnemyHealth = enemy.health;
 
   FoodFight.setBonuses(hero, enemy);
 
-  //initial output of health to dom. 
-  fight.outputCurrentHealths();  
+  //initial output of health to dom.
+  fight.outputCurrentHealths();
   }
 
 
-  // We also use this function as part of the attack button. 
+  // We also use this function as part of the attack button.
 
   fight.outputCurrentHealths = function() {
     var replacementHeroHealth = $(`<div id = "currentHeroHealth">Current Health: ${currentHeroHealth}</div>`).hide();
@@ -78,10 +78,12 @@ var FoodFight = (function(fight) {
   };
 
   fight.logAttacks = function(heroAttack, enemyAttack) {
+
     $("#battleLog").text("");
 
-    var currentLog = $(`<p>${enemy.name} attacked ${hero.name} with ${enemy.attackSpecialty} and caused ${enemyAttack} damage. ${hero.name} attacked ${enemy.name} with ${hero.specialtyAttack}. This attack caused ${heroAttack} damage.</p>`);
+    var currentLog = $(`<p>${enemy.name} attacks ${hero.name} with ${enemy.generateAttack()} This attack does ${enemyAttack} damage.</p> <p>${hero.name} attacks ${enemy.name} with ${hero.specialtyAttack}. This attack does ${heroAttack} damage.</p>`);
     currentLog.hide().appendTo("#battleLog").fadeIn();
+
   }
 
   fight.addBonuses = function(herobonus, enemybonus) {
@@ -93,14 +95,14 @@ var FoodFight = (function(fight) {
       currentHeroHealth += bonusobject.healthPoints || 0;
       var bonusMessage = $(`<p>${bonusobject.message}</p>`);
       bonusMessage.hide().appendTo("#bonusLog").delay(400).fadeIn();
-      setTimeout(function (){fight.outputCurrentHealths()}, 1000) ;
+      setTimeout(function (){fight.outputCurrentHealths()}, 1000);
     })
     enemybonus.forEach(function(bonusobject) {
       currentEnemyHealth += bonusobject.healthPoints || 0; 
       currentHeroHealth -= bonusobject.attackPoints || 0;
       var bonusMessage = $(`<p>${bonusobject.message}</p>`);
       bonusMessage.hide().appendTo("#bonusLog").delay(400).fadeIn();
-      fight.outputCurrentHealths();
+      setTimeout(function() {fight.outputCurrentHealths()}, 1000);
     })
   };
 

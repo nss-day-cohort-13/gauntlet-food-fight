@@ -1,7 +1,7 @@
 
 var FoodFight = (function(weapons) {
 
-  //empty basic weapon object prototype- mainly for practice as at this point none of the weapons have anything in common. 
+  //empty basic weapon object prototype- mainly for practice as at this point none of the weapons have anything in common.
   var basicWeapon = function() {
     this.weaponName = "";
     this.addedDamage = "";
@@ -13,21 +13,21 @@ var FoodFight = (function(weapons) {
   //indiv weapon options
   weapons.weaponOptions.chineseTakeout = function() {
     this.weapon = "chineseTakeout"
-    this.weaponName = "Chinese Takeout"; 
+    this.weaponName = "Chinese Takeout";
     this.addedDamage = 3;
   }
   weapons.weaponOptions.chineseTakeout.prototype = new basicWeapon();
 
   weapons.weaponOptions.knife = function() {
     this.weapon = "knife"
-    this.weaponName = "a Knife"; 
+    this.weaponName = "a Knife";
     this.addedDamage = 3;
   }
   weapons.weaponOptions.knife.prototype = new basicWeapon();
 
   weapons.weaponOptions.fryingPan = function() {
     this.weapon = "fryingPan";
-    this.weaponName = "a Frying Pan"; 
+    this.weaponName = "a Frying Pan";
     this.addedDamage = 3;
   }
   weapons.weaponOptions.fryingPan.prototype = new basicWeapon();
@@ -46,6 +46,15 @@ var FoodFight = (function(weapons) {
     return picture;
 
   }
+
+
+  //setting enemy picture.
+  // weapons.setPicture = function(currentEnemy) {
+
+  //   var picture = `pics/${currentEnemy.species}-${currentEnemy.weapon.weapon}.jpeg`;
+  //   return picture;
+
+  // }
 
 
   return weapons;
