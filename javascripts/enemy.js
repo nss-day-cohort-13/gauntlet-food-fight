@@ -9,8 +9,15 @@ var FoodFight = (function(enemy) {
     this.allowedEnemies = [enemy.Paula, enemy.Gordon, enemy.Lovett, enemy.Guy];
     this.bonus = [];
     this.attackSpecialty = [];
+    //weapons object
+    this.allowedWeapon = ['knife', 'Meat Tenderizer', 'Chinese Takeout', 'Frying Pan'];
+    //function to randomize the object
+    this.generateWeapon = function() {
+    var random = Math.round(Math.random() * (this.allowedWeapon.length -1));
+    var randomWeapon = this.allowedWeapon[random];
+    return randomWeapon;
+    }
 
-    this.weapon = ['knife', 'Meat Tenderizer', 'Chinese Takeout', 'Frying Pan'];
 
     this.generateEnemy = function() {
     // get a random index from the name array
@@ -30,30 +37,35 @@ var FoodFight = (function(enemy) {
     var randomSpecialty = this.attackSpecialty[random];
     return randomSpecialty
     };
-    // this.generateWeapon = function() {
-    // var random = Math.round(Math.random() * (this.allowedWeapon.length -1));
-    // var randomWeapon = this.allowedWeapon[random];
-    // return randomWeapon
-    // };
   };
 
 
   enemy.Paula = new enemy.Player2("Paula Dean");
-  enemy.Paula.attackSpecialty.push("Heart Attack! She throws a stick of butter");
-  enemy.Paula.attackSpecialty.push("Bacon Attack! She wraps you in bacon");
-  enemy.Paula.attackSpecialty.push("Insensitivity Attack! She hurls racist jokes at you.");
+  enemy.Paula.attackSpecialty.push("Heart Attack! She throws a stick of butter.");
+  enemy.Paula.attackSpecialty.push("Bacon Attack! She wraps the hero in bacon.");
+  enemy.Paula.attackSpecialty.push("Insensitivity Attack! She hurls racist jokes.");
+  enemy.Paula.species = "paulaDean";
 
-  enemy.Gordon = new enemy.Player2("Gordon Ramsey");
-  enemy.Gordon.attackSpecialty.push("Verbal Assault! He tells you to jump in the oven.");
-  enemy.Gordon.attackSpecialty.push("Verbal Assault! He puts bread on your head and calls you an idiot sandwich.");
-  enemy.Gordon.attackSpecialty.push("Verbal Assault! He calls you a panini head.");
-  enemy.Gordon.attackSpecialty.push("Verbal Assault! He calls you a useless sack of Yankee Doodle Dandy Shite.");
+  enemy.Gordon = new enemy.Player2("Gordon Ramsay");
+  enemy.Gordon.attackSpecialty.push("Verbal Assault! He tells the hero to jump in the oven.");
+  enemy.Gordon.attackSpecialty.push("Verbal Assault! He puts bread on the hero's head and calls the hero an idiot sandwich.");
+  enemy.Gordon.attackSpecialty.push("Verbal Assault! He calls the hero a panini head.");
+  enemy.Gordon.attackSpecialty.push("Verbal Assault! He calls the hero a useless sack of Yankee Doodle Dandy Shite.");
+  enemy.Gordon.species = "gordonRamsay";
+
 
   enemy.Lovett = new enemy.Player2("Mrs. Lovett");
-  enemy.Lovett.attackSpecialty.push("Meat Pie Attack! You ate some bad pie.");
+  enemy.Lovett.attackSpecialty.push("Meat Pie Attack! The hero ate some bad pie.");
+  enemy.Lovett.attackSpecialty.push("Complicit Evil! She is willing to dispose of the hero's dead body.");
+  enemy.Lovett.attackSpecialty.push("Music Attack. She sings joyfully about the hero's demise");
+  enemy.Paula.species = "lovett";
 
-  enemy.Guy = new enemy.Player2("Guy Fiere");
-  enemy.Guy.attackSpecialty.push("Offensive Appearance! You are sick from watching Guy Fiere eat.");
+  enemy.Guy = new enemy.Player2("Guy Fieri");
+  enemy.Guy.attackSpecialty.push("Offensive Appearance! The hero is sick from watching Guy Fieri eat.");
+  enemy.Guy.attackSpecialty.push("Seafood slap. The seafood's so fresh it'll slap you!");
+  enemy.Guy.attackSpecialty.push("Charcoal guy attack. Guy says only amateurs, losers, and idiots use lighter fluid.");
+  enemy.Guy.species = "guyFieri";
+
 
   enemy.enemyPlayer = new FoodFight.Player2()
   return enemy;

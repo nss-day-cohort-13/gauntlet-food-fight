@@ -77,7 +77,7 @@ var FoodFight = (function(fight) {
   };
 
   fight.logAttacks = function(heroAttack, enemyAttack) {
-    $("#battleLog").text(`${enemy.name} attacked ${hero.name} with ${enemy.generateAttack()} and caused ${enemyAttack} damage. ${hero.name} attacked ${enemy.name} with ${hero.specialtyAttack}. This attack caused ${heroAttack} damage.`)
+    $("#battleLog").text(`${enemy.name} attacks ${hero.name} with ${enemy.generateAttack()} This attack does ${enemyAttack} damage. ${hero.name} attacks ${enemy.name} with ${hero.specialtyAttack}. This attack does ${heroAttack} damage.`)
   }
 
 
