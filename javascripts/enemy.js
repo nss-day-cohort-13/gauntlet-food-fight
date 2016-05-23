@@ -10,12 +10,12 @@ var FoodFight = (function(enemy) {
     this.bonus = [];
     this.attackSpecialty = [];
     //weapons object
-    this.allowedWeapon = ['knife', 'Meat Tenderizer', 'Chinese Takeout', 'Frying Pan'];
+    this.allowedWeapon = ['knife', 'meatTenderizer', 'chineseTakeout', 'fryingPan'];
     //function to randomize the object
     this.generateWeapon = function() {
     var random = Math.round(Math.random() * (this.allowedWeapon.length -1));
     var randomWeapon = this.allowedWeapon[random];
-    return randomWeapon;
+    this.weapon =new FoodFight.weaponOptions[randomWeapon]();
     }
 
 
