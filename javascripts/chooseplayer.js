@@ -56,6 +56,7 @@ var FoodFight = (function(choose){
 
   choose.generateEnemy= function(){
     var enemy = FoodFight.enemyPlayer.generateEnemy();
+    enemy.generateWeapon();
     return enemy;
     //set a new enemy using Keith's file.
   }
