@@ -8,11 +8,13 @@ var FoodFight = (function(enemy) {
     this.attack = Math.floor(Math.random()*20 + 1) + 1;
     this.allowedEnemies = [enemy.Paula, enemy.Gordon, enemy.Lovett, enemy.Guy];
     this.bonus = [];
+
     this.paulaSpecialty = [enemy.Paula.attackSpecialty, enemy.Paula.attackSpecialty2, enemy.Paula.attackSpecialty3];
     this.gordonSpecialty = [enemy.Gordon.attackSpecialty, enemy.Gordon.attackSpecialty2, enemy.Gordon.attackSpecialty3];
     this.lovettSpecialty = [enemy.Lovett.attackSpecialty, enemy.Lovett.attackSpecialty2, enemy.Lovett.attackSpecialty3];
     this.guySpecialty = [enemy.Guy.attackSpecialty, enemy.Guy.attackSpecialty2, enemy.Guy.attackSpecialty3];
     this.weapon = ['knife', 'Meat Tenderizer', 'Chinese Takeout', 'Frying Pan'];
+
     this.generateEnemy = function() {
     // get a random index from the name array
     var random = Math.round(Math.random() * (this.allowedEnemies.length -1));

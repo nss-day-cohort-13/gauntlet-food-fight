@@ -1,28 +1,28 @@
 var FoodFight = (function (results) {
 	var resultsDiv = $("#results");
 	var resetBtn = $("#resetButton");
-	var modal = $(".modalDiv");
+	var modalDiv = $("#modalDiv");
 
 	function playAgain () {
 		$("#fight").slideUp();
 		$("#choosey").slideDown();
-		modal.hide("slow");
+		modalDiv.modal("hide");
 		$("#battleLog").text("");
 		$("#name").val("");
 		$(".heroBtn").prop('checked', false);
 	}
 
-	results.checkForDeath = function(hero, enemy) {
-		if (hero <= 0 || enemy <= 0) {
-			modal.show("slow");
-			if(hero <= 0 && enemy <= 0) {
-				resultsDiv.text(`You have both been defeated. Would you like to play again?`);
+	results.checkForDeath = function(currentHeroHealth, currentEnemyHealth, hero, enemy) {
+		if (currentHeroHealth <= 0 || currentEnemyHealth <= 0) {
+			modalDiv.modal("show");
+			if(currentHeroHealth <= 0 && currentEnemyHealth <= 0) {
+				resultsDiv.html(`<img id="deathImage1 src = "${hero.deathImage}" width = "400"><h3>You have both been defeated. Would you like to play again?</h3>`);
 			}
-			else if (hero <= 0) {
-				resultsDiv.text(`Sorry you've been defeated. Would you like to play again?`);
+			else if (currentHeroHealth <= 0) {
+				resultsDiv.html(`<img id="deathImage" src = "${hero.deathImage}" width = "400"><h3>${hero.name} the ${hero.species} has been defeated by ${enemy.name}. Would you like to play again?</h3>`);
 			}
-			else if(enemy <= 0) {
-				resultsDiv.text(`You are the victor! Would you like to play again?`);
+			else if(currentEnemyHealth <= 0) {
+				resultsDiv.html(`<h3>${hero.name} the ${hero.species} has beaten ${enemy.name}! Would you like to play again?`);
 			}
 		}
 		resetBtn.click(playAgain);
