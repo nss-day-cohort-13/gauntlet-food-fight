@@ -82,14 +82,16 @@
           <div id="currentHeroHealth">
           </div>
         </div> <!-- left div end -->
+
         <!-- Attack button and log-->
         <div class= "col-md-4 col-sm-4 col-xs-4" id="attackBtn">
-          <button id ="attackButton" class="btn btn-md btn-danger">ATTACK</button>
+          <button id ="attackButton" class="btn btn-md btn-danger" value="PLAY"  onclick="audio.play()">ATTACK</button>
           <!-- Battle Log goes here. -->
           <div id="battleLog">
           </div>
           <div id="bonusLog">
           </div>
+
         </div>
         <!-- Right character div -->
         <div class= "col-md-4 col-sm-4 col-xs-4">
@@ -104,6 +106,9 @@
 
   </section>
 
+  <audio id="audio" src="pics/Jab.wav" ></audio>
+  <audio id="winSound" src="pics/win.wav" ></audio>
+  <audio id="loseSound" src="pics/lose.wav" ></audio>
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type = "text/javascript" src = "javascripts/weapons.js"></script>
@@ -113,5 +118,6 @@
   <script type="text/javascript" src = "javascripts/chooseplayer.js"></script>
   <script type="text/javascript" src="javascripts/results.js"></script>
   <script type="text/javascript" src="javascripts/bonus.js"></script>
+  <script type="text/javascript" src="sound.js"></script>
 </body>
 </html>

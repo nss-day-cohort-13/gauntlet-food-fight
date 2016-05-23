@@ -114,4 +114,6 @@ var FoodFight = (function(fight) {
 
 
   return fight;
+
+
 } (FoodFight || {}))
