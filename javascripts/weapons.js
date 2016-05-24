@@ -49,12 +49,12 @@ var FoodFight = (function(weapons) {
 
 
   //setting enemy picture.
-  // weapons.setPicture = function(currentEnemy) {
+  weapons.setEnemyPicture = function(currentEnemy) {
 
-  //   var picture = `pics/${currentEnemy.species}-${currentEnemy.weapon.weapon}.jpeg`;
-  //   return picture;
+    var picture = `pics/${currentEnemy.species}-${currentEnemy.weapon.weapon}.jpg`;
+    return picture;
 
-  // }
+  }
 
 
   return weapons;
