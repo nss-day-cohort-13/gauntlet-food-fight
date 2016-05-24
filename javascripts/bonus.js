@@ -1,7 +1,13 @@
 var FoodFight = (function(bonus) {
   bonus.setBonuses = function(hero, enemy) {
+    hero.bonus = [];
+    enemy.bonus = [];
     var heroBonus = hero.bonus;
     var enemyBonus = enemy.bonus;
+    var thisAttackNumber = Math.random();
+    console.log("this attack number", thisAttackNumber );
+
+
     //fruits 
     if (hero.type === "Fruit") {
       heroBonus.push({
@@ -154,7 +160,7 @@ var FoodFight = (function(bonus) {
           })
         }
         //lobster bonuses
-      } else if (hero.species === "lobster") {
+      } else if (hero.species === "Lobster") {
         if (hero.weapon.weapon === "fryingPan") {
           heroBonus.push({
             name: "musicalPan",

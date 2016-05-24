@@ -20,6 +20,7 @@ var FoodFight = (function(fight) {
     );
   //output enemy info to the dom.
   $("#enemyInfo").html(`<h1>${enemy.name}</h1>
+    <h3>With ${enemy.weapon.weaponName}</h3>
     <h3>Current Enemy Health: <span id="currentEnemyHealth"></span</h3>
     <p>Randomized Max Attack: ${enemy.attack}</p>`);
 
@@ -27,7 +28,7 @@ var FoodFight = (function(fight) {
   currentHeroHealth = hero.health;
   currentEnemyHealth = enemy.health;
 
-  FoodFight.setBonuses(hero, enemy);
+  
 
   //initial output of health to dom.
   fight.outputCurrentHealths();
@@ -61,7 +62,7 @@ var FoodFight = (function(fight) {
     //update DOM.
     fight.outputCurrentHealths();
     fight.logAttacks(heroAttack, enemyAttack);
-
+    FoodFight.setBonuses(hero, enemy);
     FoodFight.addBonuses(hero.bonus, enemy.bonus);
 
     //check if any healths are zero.
