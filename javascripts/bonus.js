@@ -16,7 +16,7 @@ var FoodFight = (function(bonus) {
         });
       }
       //fruit enemy bonuses
-      if (enemy.name === "Paula Deen" && thisAttackNumber <= .2) {
+      if (enemy.name === "Paula Dean" && thisAttackNumber <= .2) {
         enemyBonus.push({
           name: "pie",
           attackPoints: 5,
@@ -124,7 +124,7 @@ var FoodFight = (function(bonus) {
             healthPoints: 2,
             message: "BONUS: Peach and the frying pan have matching sunglasses. Like bosses. +2 hero health."
           })
-          if (enemy.species === "paulaDeen" && thisAttackNumber >= .1) {
+          if (enemy.species === "paulaDean" && thisAttackNumber >= .1) {
             heroBonus.push({
               name: "donkey",
               healthPoints: -2,
@@ -310,11 +310,11 @@ var FoodFight = (function(bonus) {
         })
       }
       //vegetable enemy bonuses 
-      if (enemy.name === "Paula Deen" && thisAttackNumber >=.5) {
+      if (enemy.name === "Paula Dean" && thisAttackNumber >=.5) {
         heroBonus.push({
           name: "ewveggies",
           attackPoints: 2,
-          message: "BONUS: Paula Deen has no idea what to do with vegetables. -2 enemy health."
+          message: "BONUS: Paula Dean has no idea what to do with vegetables. -2 enemy health."
         })
       } else if (enemy.name === "Gordon Ramsay" && thisAttackNumber <=.5) {
         enemyBonus.push({
@@ -416,6 +416,20 @@ var FoodFight = (function(bonus) {
     }
     //Ramsay weapon bonuses
     if (enemy.name === "Gordon Ramsay") {
+
+      if (thisAttackNumber >=.7) {
+        enemyBonus.push({
+          name:"yelling", 
+          attackPoints: 3, 
+          message: "BONUS: Gordon Ramsay's yelling sometimes makes people cry. +3 enemy attack."
+        })
+      } else if (thisAttackNumber <=.3) {
+        enemyBonus.push({
+          name: "yelling 2", 
+          attackPoints: -3, 
+          message: "BONUS: Gordon Ramsay's yelling sometimes makes people do their best work. +3 hero health."
+        })
+      }
       if (hero.species === "Apple" && thisAttackNumber >=.5) {
         enemyBonus.push({
           name: "spiralize",
@@ -457,12 +471,46 @@ var FoodFight = (function(bonus) {
         })
       }
       //paula weapon bonuses
-    } else if (enemy.name === "Paula Deen") {
+    } else if (enemy.name === "Paula Dean") {
+
+      if (thisAttackNumber >=.7) {
+        enemyBonus.push({
+          name: "fat", 
+          attackPoints: 1, 
+          message: "BONUS: Paula's food is coma-inducingly delicious. +1 enemy attack."
+        })
+      } else if (thisAttackNumber <=.3) {
+        enemyBonus.push({
+          name: "butter", 
+          healthPoints: -3, 
+          message: "Paula Dean's recipes sometimes sound suspiciously like a suicide note. -3 enemy health."
+        })
+      }
+
+      if (enemy.weapon.weapon === "fryingPan" && thisAttackNumber >=.2) {
+        enemyBonus.push({
+          name: "noface", 
+          attackPoints: -1, 
+          message: "BONUS: what is even going on, Paula Dean? Why is there a frying pan on your face? -1 enemy attack."
+        })
+      } else if (enemy.weapon.weapon === "knife" && thisAttackNumber <=.7) {
+        enemyBonus.push({
+          name: "cleaning ears", 
+          attackPoints: 1, 
+          message: "BONUS: Paula says it's always a good idea to clean your ears with your knife before attacking, for extra germiness. +1 enemy attack."
+        })
+      } else if (enemy.weapon.weapon === "meatTenderizer" && thisAttackNumber >=.3) {
+        enemyBonus.push({
+          name: "masher", 
+          attackPoints: -3, 
+          message: "BONUS: Paula Paula Paula. That's not a meat tenderizer, that's a potato masher. You should know better. -3 enemy attack."
+        })
+      }
       if (enemy.species === "Lobster" && thisAttackNumber >= .5) {
         enemyBonus.push({
           name: "toofancy",
           healthPoints: -1,
-          message: "BONUS: lobster is too fancy for down-home Paula Deen. -1 enemy health."
+          message: "BONUS: lobster is too fancy for down-home Paula Dean. -1 enemy health."
         })
       } else if (enemy.species === "Apple" && thisAttackNumber <= .6) {
         enemyBonus.push({
@@ -528,6 +576,7 @@ var FoodFight = (function(bonus) {
           message: "BONUS: I think Guy's hair is on fire too. why else would it look that way??!?!? -3 enemy health."
         })
       }
+
       if (hero.species === "Potato") {
         enemyBonus.push({
           name: "frenchfries",
