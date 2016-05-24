@@ -239,7 +239,7 @@ var FoodFight = (function(bonus) {
           heroBonus.push({
             name: "littleMermaid2",
             attackPoints: -1,
-            message: "Ariel comes to the Lobster's rescue with a snorflewank! -1 hero attack."
+            message: "BONUS: Ariel comes to the Lobster's rescue with a snorflewank! -1 hero attack."
           })
         }
         if (hero.weapon.weapon === "fryingPan" && thisAttackNumber >= .4) {

@@ -45,7 +45,7 @@ var FoodFight = (function(enemy) {
   enemy.Paula.attackSpecialty.push("Bacon Attack! She wraps the hero in bacon.");
   enemy.Paula.attackSpecialty.push("Insensitivity Attack! She hurls racist jokes.");
   enemy.Paula.species = "paulaDean";
-  enemy.Paula.deathPicture = "pics/paulaDean-death.jpg"
+  enemy.Paula.deathImage = "pics/paulaDean-death.jpg";
 
   enemy.Gordon = new enemy.Player2("Gordon Ramsay");
   enemy.Gordon.attackSpecialty.push("Verbal Assault! He tells the hero to jump in the oven.");
@@ -53,6 +53,7 @@ var FoodFight = (function(enemy) {
   enemy.Gordon.attackSpecialty.push("Verbal Assault! He calls the hero a panini head.");
   enemy.Gordon.attackSpecialty.push("Verbal Assault! He calls the hero a useless sack of Yankee Doodle Dandy Shite.");
   enemy.Gordon.species = "gordonRamsay";
+  enemy.Gordon.deathImage = "#";
 
 
   enemy.Lovett = new enemy.Player2("Mrs. Lovett");
@@ -60,13 +61,14 @@ var FoodFight = (function(enemy) {
   enemy.Lovett.attackSpecialty.push("Complicit Evil! She is willing to dispose of the hero's dead body.");
   enemy.Lovett.attackSpecialty.push("Music Attack. She sings joyfully about the hero's demise");
   enemy.Lovett.species = "lovett";
+  enemy.Lovett.deathImage = "#";
 
   enemy.Guy = new enemy.Player2("Guy Fieri");
   enemy.Guy.attackSpecialty.push("Offensive Appearance! The hero is sick from watching Guy Fieri eat.");
   enemy.Guy.attackSpecialty.push("Seafood slap. The seafood's so fresh it'll slap you!");
   enemy.Guy.attackSpecialty.push("Charcoal guy attack. Guy says only amateurs, losers, and idiots use lighter fluid.");
   enemy.Guy.species = "guyFieri";
-  enemy.Guy.deathPicture = "pics/guyFieri-death.jpg";
+  enemy.Guy.deathImage = "pics/guyFieri-death.jpg";
 
 
   enemy.enemyPlayer = new FoodFight.Player2()
