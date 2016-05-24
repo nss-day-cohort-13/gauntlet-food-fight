@@ -8,7 +8,7 @@ var FoodFight = (function(hero){
 		this.name = name;
 		this.bonus = [];
 	}
-
+ 
 
 	//super classes
 	var Vegetable = function (name) {

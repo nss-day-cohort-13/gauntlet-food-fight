@@ -457,7 +457,7 @@ var FoodFight = (function(bonus) {
           message: "BONUS: Potatos are a unique but delicious ingredient in potstickers. -3 hero health."
         })
       } else if (enemy.weapon.weapon === "knife" && hero.species ===
-        "Tomato" ** thisAttackNumber <=.7) {
+        "Tomato" && thisAttackNumber <=.7) {
         enemyBonus.push({
           name: "superdice",
           attackPoints: 1,
