@@ -53,7 +53,7 @@ var FoodFight = (function(enemy) {
   enemy.Gordon.attackSpecialty.push("Verbal Assault! He calls the hero a panini head.");
   enemy.Gordon.attackSpecialty.push("Verbal Assault! He calls the hero a useless sack of Yankee Doodle Dandy Shite.");
   enemy.Gordon.species = "gordonRamsay";
-  enemy.Gordon.deathImage = "#";
+  enemy.Gordon.deathImage = "pics/gordonRamsay-death.jpeg";
 
 
   enemy.Lovett = new enemy.Player2("Mrs. Lovett");
@@ -61,7 +61,7 @@ var FoodFight = (function(enemy) {
   enemy.Lovett.attackSpecialty.push("Complicit Evil! She is willing to dispose of the hero's dead body.");
   enemy.Lovett.attackSpecialty.push("Music Attack. She sings joyfully about the hero's demise");
   enemy.Lovett.species = "lovett";
-  enemy.Lovett.deathImage = "#";
+  enemy.Lovett.deathImage = "pics/lovett-death.jpeg";
 
   enemy.Guy = new enemy.Player2("Guy Fieri");
   enemy.Guy.attackSpecialty.push("Offensive Appearance! The hero is sick from watching Guy Fieri eat.");
